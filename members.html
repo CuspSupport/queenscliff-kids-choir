@@ -316,34 +316,31 @@
         </g>
         <circle cx="50" cy="50" r="14" fill="var(--sun)"/>
       </svg>
-      <h2 class="section-title">Teaching Videos</h2>
-      <p class="section-sub">Short walkthroughs to help learn each part.</p>
+     /* PDF resource links (sign guide booklets) */
+  .pdf-resource {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--sand);
+    border: 1.5px solid var(--sand-deep);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
 
-      <div class="content-list">
-               <div class="content-card">
-          <h3>Dreams — Learning the Signs</h3>
-          <p class="content-note">Under 5 minutes</p>
-          <div class="embed-wrap video">
-            <div class="embed-placeholder">
-              Sign video coming soon
-            </div>
-          </div>
-        </div>
+  .pdf-resource:hover, .pdf-resource:focus-visible {
+    border-color: var(--teal);
+    background: var(--white);
+  }
 
-       
-                  <div class="content-card">
-          <h3>My Island Home — Learning the Signs</h3>
-          <p class="content-note">Under 5 minutes</p>
-          <div class="embed-wrap video">
-            <div class="embed-placeholder">
-              Sign video coming soon
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  .pdf-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
   <footer>
     <div class="wrap">
       <p>Queenscliff Kids Choir · <a href="/">Back to home</a></p>
