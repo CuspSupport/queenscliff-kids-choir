@@ -208,9 +208,35 @@
     border-radius: 10px;
   }
 
-  .embed-wrap.video .embed-placeholder {
+    .embed-wrap.video .embed-placeholder {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  /* PDF resource links (sign guide booklets) */
+  .pdf-resource {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--sand);
+    border: 1.5px solid var(--sand-deep);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .pdf-resource:hover, .pdf-resource:focus-visible {
+    border-color: var(--teal);
+    background: var(--white);
+  }
+
+  .pdf-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
   }
 
   /* Note banner for Brendan while building — delete this section once content is added */
@@ -316,7 +342,7 @@
         </g>
         <circle cx="50" cy="50" r="14" fill="var(--sun)"/>
       </svg>
-     /* PDF resource links (sign guide booklets) */
+/* PDF resource links (sign guide booklets) */
   .pdf-resource {
     display: flex;
     align-items: center;
