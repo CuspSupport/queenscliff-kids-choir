@@ -480,6 +480,57 @@
     color: var(--teal-deep);
     text-decoration: none;
   }
+
+  /* Enrolment form */
+  .enrol-form {
+    max-width: 440px;
+    margin: 32px auto 0;
+    text-align: left;
+  }
+
+  .form-field {
+    margin-bottom: 18px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--sand-deep);
+    background: var(--white);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+
+  .enrol-form .btn-primary {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .form-note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 14px 0 0;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -684,7 +735,7 @@
     </div>
   </section>
 
-  <section id="enrol">
+    <section id="enrol">
     <div class="wrap">
       <div class="enrol">
         <svg class="section-icon" viewBox="0 0 100 100" aria-hidden="true">
@@ -704,8 +755,47 @@
           <circle cx="59" cy="44" r="2.2" fill="var(--ink)"/>
         </svg>
         <h2>Ready to join?</h2>
-        <p>Fill out our quick enrolment form and we'll be in touch with next steps.</p>
-        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Enrol Now</a>
+        <p>Fill out the quick form below and we'll be in touch with next steps.</p>
+
+        <form class="enrol-form" action="https://formspree.io/f/mrpeggpy" method="POST">
+          <input type="hidden" name="_subject" value="New Choir Enrolment">
+
+          <div class="form-field">
+            <label for="child-name">Child's Name</label>
+            <input type="text" id="child-name" name="Child's Name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="parent-name">Parent/Guardian Name</label>
+            <input type="text" id="parent-name" name="Parent/Guardian Name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-number">Contact Number</label>
+            <input type="tel" id="contact-number" name="Contact Number" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="year-level">Year Level</label>
+            <select id="year-level" name="Year Level" required>
+              <option value="" disabled selected>Select grade</option>
+              <option value="Grade 1">Grade 1</option>
+              <option value="Grade 2">Grade 2</option>
+              <option value="Grade 3">Grade 3</option>
+              <option value="Grade 4">Grade 4</option>
+              <option value="Grade 5">Grade 5</option>
+              <option value="Grade 6">Grade 6</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Enrolment</button>
+          <p class="form-note">We only use these details to run the choir and contact families. Submissions are processed by Formspree, a US-based form service, and are not used for marketing.</p>
+        </form>
       </div>
     </div>
   </section>
